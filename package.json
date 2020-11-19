@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "clean": "yarn workspaces run clean",
+    "start": "cd packages/web-cv && yarn start",
+    "fix": "yarn fix:prettier",
+    "fix:prettier": "npx prettier -w .",
+    "test": "yarn workspaces run test",
+    "build-start": "yarn build && yarn start",
+    "clean-build-start": "yarn clean && yarn build && yarn start"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}
