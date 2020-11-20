@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
+import { App } from './App';
+
+// This form of import is required for the styled-components to work correctly.
+// eslint-disable-next-line
+import _ from 'styled-components/cssprop';
 
 ReactDOM.render(
   <React.StrictMode>
