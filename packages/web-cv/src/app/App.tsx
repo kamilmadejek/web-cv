@@ -2,6 +2,7 @@ import React from 'react';
 import './import-styled-components';
 import { GeneralInformationHeader } from './cv/general-information-header/GeneralInformationHeader';
 import { CV } from '../cv/types';
+import { AppDiv } from './AppStyles';
 
 export interface AppProps {
   readonly cv: CV | null;
@@ -9,7 +10,7 @@ export interface AppProps {
 
 export const App: React.FC<AppProps> = ({ cv }) =>
   cv ? (
-    <React.Fragment>
+    <AppDiv>
       <GeneralInformationHeader generalInformation={cv.generalInformation} />
-    </React.Fragment>
+    </AppDiv>
   ) : null;
