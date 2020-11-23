@@ -1,6 +1,6 @@
 import React from 'react';
 import { GeneralInformation } from '../../../cv/types';
-import { BackgroundDiv } from './GeneralInformationHeaderStyles';
+import { BackgroundDiv, LabelValueSpan, NameDiv, ProfessionalTitleDiv } from './GeneralInformationHeaderStyles';
 import { LabelValueLayout } from '../../general-ui/components/label-value-layout/LabelValueLayout';
 import { PageWidthBox } from '../../general-ui/components/page-width-box/PageWidthBox';
 
@@ -12,19 +12,19 @@ export const GeneralInformationHeader: React.FC<GeneralInformationHeaderProps> =
   <section>
     <BackgroundDiv>
       <PageWidthBox>
-        <div>{generalInformation.name}</div>
-        <div>{generalInformation.professionalTitle}</div>
+        <NameDiv>{generalInformation.name}</NameDiv>
+        <ProfessionalTitleDiv>{generalInformation.professionalTitle}</ProfessionalTitleDiv>
         <LabelValueLayout>
-          Phone
-          {generalInformation.phone}
+          <LabelValueSpan>Phone</LabelValueSpan>
+          <LabelValueSpan>{generalInformation.phone}</LabelValueSpan>
         </LabelValueLayout>
         <LabelValueLayout>
-          E-mail
-          {generalInformation.email}
+          <LabelValueSpan>E-mail</LabelValueSpan>
+          <LabelValueSpan>{generalInformation.email}</LabelValueSpan>
         </LabelValueLayout>
         <LabelValueLayout>
-          LinkedIn
-          {generalInformation.linkedIn}
+          <LabelValueSpan>LinkedIn</LabelValueSpan>
+          <LabelValueSpan>{generalInformation.linkedIn}</LabelValueSpan>
         </LabelValueLayout>
       </PageWidthBox>
     </BackgroundDiv>
