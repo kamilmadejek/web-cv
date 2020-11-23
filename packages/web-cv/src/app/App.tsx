@@ -2,8 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import './import-styled-components';
 import { CV } from '../cv/types';
-import { AppDiv, StyledGeneralInformationHeader, StyledJobView } from './AppStyles';
-import { ItemizedSection } from './general-ui/components/itemized-section/ItemizedSection';
+import {
+  AppDiv,
+  StyledEducationView,
+  StyledGeneralInformationHeader,
+  StyledItemizedSection,
+  StyledJobView,
+} from './AppStyles';
 import { PageWidthBox } from './general-ui/components/page-width-box/PageWidthBox';
 
 export interface AppProps {
@@ -17,7 +22,7 @@ export const App: React.FC<AppProps> = ({ cv, className }) =>
     <AppDiv className={className}>
       <StyledGeneralInformationHeader generalInformation={cv.generalInformation} />
       <PageWidthBox>
-        <ItemizedSection title="Experience">
+        <StyledItemizedSection title="Experience">
           {_.flatten(
             cv.employmentHistory.map((employment, eIndex) =>
               employment.jobs.map((job, jIndex) => (
@@ -25,7 +30,13 @@ export const App: React.FC<AppProps> = ({ cv, className }) =>
               )),
             ),
           )}
-        </ItemizedSection>
+        </StyledItemizedSection>
+        <StyledItemizedSection title="Education">
+          {cv.educationHistory.map((education, index) => (
+            <StyledEducationView key={index} education={education} />
+          ))}
+        </StyledItemizedSection>
+        <StyledItemizedSection title="Skills"></StyledItemizedSection>
       </PageWidthBox>
     </AppDiv>
   ) : null;

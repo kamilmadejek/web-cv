@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { DateRangeDiv, EndDateSpan, DashSpan, StartDateSpan } from './DateRangeViewStyles';
+import { DateRangeDiv } from './DateRangeViewStyles';
 
 export interface DateRangeViewProps {
   readonly startDate: string;
@@ -10,8 +10,9 @@ export interface DateRangeViewProps {
 
 export const DateRangeView: FC<DateRangeViewProps> = ({ startDate, endDate, className }) => (
   <DateRangeDiv className={className}>
-    <StartDateSpan>{startDate}</StartDateSpan> <DashSpan>-</DashSpan>
-    <br />
-    <EndDateSpan>{endDate}</EndDateSpan>
+    <span>
+      {startDate} -<br />
+      {endDate}
+    </span>
   </DateRangeDiv>
 );
