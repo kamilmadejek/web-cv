@@ -17,7 +17,7 @@ export const StyledGeneralInformationHeader = styled(GeneralInformationHeader)`
 `;
 
 export const StyledItemizedSection = styled(ItemizedSection)`
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -25,7 +25,7 @@ export const StyledItemizedSection = styled(ItemizedSection)`
 `;
 
 export const StyledJobView = styled(JobView)`
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -33,7 +33,7 @@ export const StyledJobView = styled(JobView)`
 `;
 
 export const StyledEducationView = styled(EducationView)`
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 
   &:last-child {
     margin-bottom: 0;

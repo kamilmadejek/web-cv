@@ -44,4 +44,5 @@ export const StyledLabelValueLayout = styled(LabelValueLayout)`
 
 export const ProfessionalDescriptionDiv = styled.div`
   margin-top: 1rem;
+  line-height: 1.4;
 `;

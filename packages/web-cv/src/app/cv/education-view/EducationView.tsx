@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
 import { Education } from '../../../cv/types';
 import {
-  EducationDiv,
   EducationDetailsDiv,
-  StyledDateRangeView,
+  EducationDiv,
+  FieldDiv,
   InstitutionDiv,
   MajorDiv,
+  StyledDateRangeView,
 } from './EducationViewStyles';
 
 export interface EducationViewProps {
@@ -19,6 +20,7 @@ export const EducationView: FC<EducationViewProps> = ({ education, className }) 
     <StyledDateRangeView startDate={education.startDate} endDate={education.endDate} />
     <EducationDetailsDiv>
       <InstitutionDiv>{education.institution}</InstitutionDiv>
+      <FieldDiv>{education.field}</FieldDiv>
       <MajorDiv>{education.major}</MajorDiv>
     </EducationDetailsDiv>
   </EducationDiv>

@@ -22,6 +22,9 @@ export const InstitutionDiv = styled.div`
   margin-bottom: 0.2rem;
 `;
 
+export const FieldDiv = styled.div`
+  line-height: 1.4;
+`;
 export const MajorDiv = styled.div`
-  font-size: ${FONT_SIZE_S};
+  line-height: 1.4;
 `;

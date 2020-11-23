@@ -10,7 +10,7 @@ export const BoxDiv = styled.div`
   width: ${SIZE_A4_WIDTH};
   flex: 0 0 ${SIZE_A4_WIDTH};
   margin: auto;
-  padding: 0 1.8rem;
+  padding: 0 2.2rem;
 `;
 
 export const SideDiv = styled.div`

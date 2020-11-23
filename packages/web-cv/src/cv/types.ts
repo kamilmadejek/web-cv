@@ -32,6 +32,7 @@ export interface Education {
   readonly startDate: string;
   readonly endDate: string;
   readonly institution: string;
+  readonly field: string;
   readonly major: string;
 }
 
