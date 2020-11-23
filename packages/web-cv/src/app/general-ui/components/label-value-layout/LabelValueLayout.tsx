@@ -1,14 +1,16 @@
 import React from 'react';
-import { ContainerDiv, LabelDiv, ValueDiv } from './LabelValueLayoutStyles';
+import { ContainerDiv } from './LabelValueLayoutStyles';
 
-export interface LabelValueLayoutProps {}
+export interface LabelValueLayoutProps {
+  readonly className?: string;
+}
 
-export const LabelValueLayout: React.FC<LabelValueLayoutProps> = ({ children }) => {
+export const LabelValueLayout: React.FC<LabelValueLayoutProps> = ({ children, className }) => {
   const childrenArray = React.Children.toArray(children);
   return (
-    <ContainerDiv>
-      <LabelDiv>{childrenArray[0] || null}</LabelDiv>
-      <ValueDiv>{childrenArray[1] || null}</ValueDiv>
+    <ContainerDiv className={className}>
+      {childrenArray[0] || null}
+      {childrenArray[1] || null}
     </ContainerDiv>
   );
 };

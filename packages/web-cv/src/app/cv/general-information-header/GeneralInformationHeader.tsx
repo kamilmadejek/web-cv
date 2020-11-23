@@ -1,31 +1,43 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { GeneralInformation } from '../../../cv/types';
-import { BackgroundDiv, LabelValueSpan, NameDiv, ProfessionalTitleDiv } from './GeneralInformationHeaderStyles';
+import { BackgroundDiv, NameDiv, ProfessionalTitleDiv, StyledLabelValueLayout } from './GeneralInformationHeaderStyles';
 import { LabelValueLayout } from '../../general-ui/components/label-value-layout/LabelValueLayout';
 import { PageWidthBox } from '../../general-ui/components/page-width-box/PageWidthBox';
+import { TwoColumnLayout } from '../../general-ui/components/two-column-layout/TwoColumnLayout';
 
 export interface GeneralInformationHeaderProps {
   readonly generalInformation: GeneralInformation;
+
+  readonly className?: string;
 }
 
-export const GeneralInformationHeader: React.FC<GeneralInformationHeaderProps> = ({ generalInformation }) => (
-  <section>
+export const GeneralInformationHeader: React.FC<GeneralInformationHeaderProps> = ({
+  generalInformation,
+  className,
+}) => (
+  <section className={className}>
     <BackgroundDiv>
       <PageWidthBox>
         <NameDiv>{generalInformation.name}</NameDiv>
         <ProfessionalTitleDiv>{generalInformation.professionalTitle}</ProfessionalTitleDiv>
-        <LabelValueLayout>
-          <LabelValueSpan>Phone</LabelValueSpan>
-          <LabelValueSpan>{generalInformation.phone}</LabelValueSpan>
-        </LabelValueLayout>
-        <LabelValueLayout>
-          <LabelValueSpan>E-mail</LabelValueSpan>
-          <LabelValueSpan>{generalInformation.email}</LabelValueSpan>
-        </LabelValueLayout>
-        <LabelValueLayout>
-          <LabelValueSpan>LinkedIn</LabelValueSpan>
-          <LabelValueSpan>{generalInformation.linkedIn}</LabelValueSpan>
-        </LabelValueLayout>
+        <TwoColumnLayout>
+          <div>
+            <StyledLabelValueLayout>
+              <span>Phone</span>
+              <span>{generalInformation.phone}</span>
+            </StyledLabelValueLayout>
+            <StyledLabelValueLayout>
+              <span>E-mail</span>
+              <span>{generalInformation.email}</span>
+            </StyledLabelValueLayout>
+          </div>
+          <div>
+            <StyledLabelValueLayout>
+              <span>LinkedIn</span>
+              <span>{generalInformation.linkedIn}</span>
+            </StyledLabelValueLayout>
+          </div>
+        </TwoColumnLayout>
       </PageWidthBox>
     </BackgroundDiv>
     <PageWidthBox>

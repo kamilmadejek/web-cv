@@ -9,6 +9,7 @@ import {
   FONT_WEIGHT_REGULAR,
   FONT_WEIGHT_THIN,
 } from '../../general-ui/style';
+import { LabelValueLayout } from '../../general-ui/components/label-value-layout/LabelValueLayout';
 
 export const BackgroundDiv = styled.div`
   padding: 1rem 0;
@@ -28,8 +29,7 @@ export const ProfessionalTitleDiv = styled.div`
   margin-bottom: 1rem;
 `;
 
-export const LabelValueSpan = styled.span`
-  display: inline-block;
+export const StyledLabelValueLayout = styled(LabelValueLayout)`
   font-size: ${FONT_SIZE_M};
   margin-bottom: 0.2rem;
 `;

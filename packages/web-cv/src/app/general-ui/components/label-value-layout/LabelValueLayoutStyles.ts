@@ -4,12 +4,10 @@ import { FONT_WEIGHT_BOLD } from '../../style';
 export const ContainerDiv = styled.div`
   display: flex;
   flex-direction: row;
-`;
 
-export const LabelDiv = styled.div`
-  min-width: 2.5rem;
-  margin-right: 1rem;
-  font-weight: ${FONT_WEIGHT_BOLD};
+  > :nth-child(1) {
+    min-width: 2.3rem;
+    margin-right: 0.8rem;
+    font-weight: ${FONT_WEIGHT_BOLD};
+  }
 `;
-
-export const ValueDiv = styled.div``;

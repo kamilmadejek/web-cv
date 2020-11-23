@@ -13,6 +13,7 @@ export interface GeneralInformation {
   readonly phone: string;
   readonly email: string;
   readonly linkedIn: string;
+  readonly webpage: string;
 }
 
 export interface Employment {
