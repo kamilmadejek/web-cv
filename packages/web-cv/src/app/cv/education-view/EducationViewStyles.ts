@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { DateRangeView } from '../date-range-view/DateRangeView';
-import { FONT_SIZE_L, FONT_SIZE_M, FONT_WEIGHT_MEDIUM } from '../../general-ui/style';
+import { FONT_SIZE_L, FONT_SIZE_M, FONT_SIZE_S, FONT_WEIGHT_MEDIUM } from '../../general-ui/style';
 
 export const EducationDiv = styled.div`
   display: flex;
@@ -23,5 +23,5 @@ export const InstitutionDiv = styled.div`
 `;
 
 export const MajorDiv = styled.div`
-  font-size: ${FONT_SIZE_M};
+  font-size: ${FONT_SIZE_S};
 `;

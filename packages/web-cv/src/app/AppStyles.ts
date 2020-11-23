@@ -4,6 +4,7 @@ import { GeneralInformationHeader } from './cv/general-information-header/Genera
 import { JobView } from './cv/job-view/JobView';
 import { ItemizedSection } from './general-ui/components/itemized-section/ItemizedSection';
 import { EducationView } from './cv/education-view/EducationView';
+import { SkillView } from './cv/skill-view/SkillView';
 
 export const AppDiv = styled.div`
   font-family: 'Roboto', sans-serif;
@@ -33,6 +34,14 @@ export const StyledJobView = styled(JobView)`
 
 export const StyledEducationView = styled(EducationView)`
   margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+export const StyledSkillView = styled(SkillView)`
+  margin-bottom: 0.6rem;
 
   &:last-child {
     margin-bottom: 0;

@@ -8,6 +8,7 @@ import {
   StyledGeneralInformationHeader,
   StyledItemizedSection,
   StyledJobView,
+  StyledSkillView,
 } from './AppStyles';
 import { PageWidthBox } from './general-ui/components/page-width-box/PageWidthBox';
 
@@ -36,7 +37,11 @@ export const App: React.FC<AppProps> = ({ cv, className }) =>
             <StyledEducationView key={index} education={education} />
           ))}
         </StyledItemizedSection>
-        <StyledItemizedSection title="Skills"></StyledItemizedSection>
+        <StyledItemizedSection title="Skills">
+          {cv.skills.map((skill, index) => (
+            <StyledSkillView key={index} skill={skill} />
+          ))}
+        </StyledItemizedSection>
       </PageWidthBox>
     </AppDiv>
   ) : null;
