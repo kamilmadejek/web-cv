@@ -16,4 +16,5 @@ export const FONT_SIZE_XXL = '2.2rem';
 
 export const FONT_WEIGHT_THIN = '200';
 export const FONT_WEIGHT_REGULAR = '400';
-export const FONT_WEIGHT_BOLD = '600';
+export const FONT_WEIGHT_MEDIUM = '500';
+export const FONT_WEIGHT_BOLD = '700';

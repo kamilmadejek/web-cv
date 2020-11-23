@@ -5,7 +5,6 @@ import {
   FONT_SIZE_M,
   FONT_SIZE_XL,
   FONT_SIZE_XXL,
-  FONT_WEIGHT_BOLD,
   FONT_WEIGHT_REGULAR,
   FONT_WEIGHT_THIN,
 } from '../../general-ui/style';
@@ -35,5 +34,5 @@ export const StyledLabelValueLayout = styled(LabelValueLayout)`
 `;
 
 export const ProfessionalDescriptionDiv = styled.div`
-  margin: 1rem 0;
+  margin-top: 1rem;
 `;
