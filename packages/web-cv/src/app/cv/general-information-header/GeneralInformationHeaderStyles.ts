@@ -31,5 +31,9 @@ export const ProfessionalTitleDiv = styled.div`
 
 export const StyledLabelValueLayout = styled(LabelValueLayout)`
   font-size: ${FONT_SIZE_M};
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
+`;
+
+export const ProfessionalDescriptionDiv = styled.div`
+  margin: 1rem 0;
 `;

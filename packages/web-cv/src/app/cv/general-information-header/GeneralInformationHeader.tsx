@@ -1,6 +1,12 @@
 import React, { Fragment } from 'react';
 import { GeneralInformation } from '../../../cv/types';
-import { BackgroundDiv, NameDiv, ProfessionalTitleDiv, StyledLabelValueLayout } from './GeneralInformationHeaderStyles';
+import {
+  BackgroundDiv,
+  NameDiv,
+  ProfessionalDescriptionDiv,
+  ProfessionalTitleDiv,
+  StyledLabelValueLayout,
+} from './GeneralInformationHeaderStyles';
 import { LabelValueLayout } from '../../general-ui/components/label-value-layout/LabelValueLayout';
 import { PageWidthBox } from '../../general-ui/components/page-width-box/PageWidthBox';
 import { TwoColumnLayout } from '../../general-ui/components/two-column-layout/TwoColumnLayout';
@@ -41,7 +47,7 @@ export const GeneralInformationHeader: React.FC<GeneralInformationHeaderProps> =
       </PageWidthBox>
     </BackgroundDiv>
     <PageWidthBox>
-      <div>{generalInformation.professionalDescription}</div>
+      <ProfessionalDescriptionDiv>{generalInformation.professionalDescription}</ProfessionalDescriptionDiv>
     </PageWidthBox>
   </section>
 );
