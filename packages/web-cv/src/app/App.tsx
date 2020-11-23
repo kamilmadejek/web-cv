@@ -4,11 +4,13 @@ import './import-styled-components';
 import { CV } from '../cv/types';
 import {
   AppDiv,
+  PrintPageFooter,
   StyledEducationView,
   StyledGeneralInformationHeader,
   StyledItemizedSection,
   StyledJobView,
   StyledSkillView,
+  WebPageFooter,
 } from './AppStyles';
 import { PageWidthBox } from './general-ui/components/page-width-box/PageWidthBox';
 
@@ -43,5 +45,11 @@ export const App: React.FC<AppProps> = ({ cv, className }) =>
           ))}
         </StyledItemizedSection>
       </PageWidthBox>
+      <PrintPageFooter>
+        <PageWidthBox>{cv.footer}</PageWidthBox>
+      </PrintPageFooter>
+      <WebPageFooter>
+        <PageWidthBox>WebCV, 2020 by Kamil Madejek</PageWidthBox>
+      </WebPageFooter>
     </AppDiv>
   ) : null;

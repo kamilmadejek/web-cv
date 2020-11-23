@@ -8,6 +8,7 @@ export const COLOR_HEADER_TEXT = '#ffffff';
 export const SIZE_A4_WIDTH = `${((210 / 25.4) * 96) / 16}rem`;
 export const SIZE_A4_HEIGHT = `${((297 / 25.4) * 96) / 16}rem`;
 
+export const FONT_SIZE_XS = '0.5rem';
 export const FONT_SIZE_S = '0.7rem';
 export const FONT_SIZE_M = '0.8rem';
 export const FONT_SIZE_L = '1.1rem';
