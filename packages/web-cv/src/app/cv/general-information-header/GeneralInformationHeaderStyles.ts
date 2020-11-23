@@ -19,7 +19,7 @@ export const BackgroundDiv = styled.div`
 export const NameDiv = styled.div`
   font-size: ${FONT_SIZE_XXL};
   font-weight: ${FONT_WEIGHT_REGULAR};
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 `;
 
 export const ProfessionalTitleDiv = styled.div`
@@ -31,6 +31,15 @@ export const ProfessionalTitleDiv = styled.div`
 export const StyledLabelValueLayout = styled(LabelValueLayout)`
   font-size: ${FONT_SIZE_M};
   margin-bottom: 0.3rem;
+
+  a {
+    text-decoration: none;
+    color: ${COLOR_HEADER_TEXT};
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export const ProfessionalDescriptionDiv = styled.div`

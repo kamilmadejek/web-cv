@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { GeneralInformation } from '../../../cv/types';
 import {
   BackgroundDiv,
@@ -7,7 +7,6 @@ import {
   ProfessionalTitleDiv,
   StyledLabelValueLayout,
 } from './GeneralInformationHeaderStyles';
-import { LabelValueLayout } from '../../general-ui/components/label-value-layout/LabelValueLayout';
 import { PageWidthBox } from '../../general-ui/components/page-width-box/PageWidthBox';
 import { TwoColumnLayout } from '../../general-ui/components/two-column-layout/TwoColumnLayout';
 
@@ -30,17 +29,17 @@ export const GeneralInformationHeader: React.FC<GeneralInformationHeaderProps> =
           <div>
             <StyledLabelValueLayout>
               <span>Phone</span>
-              <span>{generalInformation.phone}</span>
+              <a href={`tel:${generalInformation.phone}`}>{generalInformation.phone}</a>
             </StyledLabelValueLayout>
             <StyledLabelValueLayout>
               <span>E-mail</span>
-              <span>{generalInformation.email}</span>
+              <a href={`mailto:${generalInformation.email}`}>{generalInformation.email}</a>
             </StyledLabelValueLayout>
           </div>
           <div>
             <StyledLabelValueLayout>
               <span>LinkedIn</span>
-              <span>{generalInformation.linkedIn}</span>
+              <a href={generalInformation.linkedIn}>{generalInformation.linkedIn}</a>
             </StyledLabelValueLayout>
           </div>
         </TwoColumnLayout>
