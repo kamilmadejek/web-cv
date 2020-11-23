@@ -17,7 +17,7 @@ export const JobDetailsDiv = styled.div`
 `;
 
 export const JobTitleDiv = styled.div`
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
   font-size: ${FONT_SIZE_M};
 `;
 
