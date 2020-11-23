@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Job } from '../../../cv/types';
-import { DateRangeView } from '../date-range-view/DateRangeView';
 import {
   AtSpan,
   EmployerSpan,
