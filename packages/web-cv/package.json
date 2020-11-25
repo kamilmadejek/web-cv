@@ -1,8 +1,18 @@
 {
-  "name": "web-cv",
-  "version": "0.1.0",
+  "name": "@km/web-cv",
+  "author": "Kamil Madejek",
+  "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "react-scripts build && mv build dist",
+    "start": "react-scripts start",
+    "test": "react-scripts test --watchAll=false",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
+    "@km/utility-greenhouse": "0.0.0",
+    "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -10,18 +20,15 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.11",
+    "@types/styled-components": "^5.1.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
     "react-scripts": "4.0.0",
+    "styled-components": "^5.2.1",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "clean": "rm -rf dist",
-    "build": "react-scripts build && mv build dist",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
