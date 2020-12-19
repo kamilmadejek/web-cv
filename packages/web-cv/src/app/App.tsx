@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React from 'react';
-import './import-styled-components';
 import { CV } from '../cv/types';
 import {
   AppDiv,
